@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+# SPDX-FileCopyrightText: 2024 Takeru Yoshida
 import sys
 
 ans = 0.0
