@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 # SPDX-FileCopyrightText: 2024 Takeru Yoshida
 ng () {
 	echo ${1}行目が違うよ
