@@ -1,5 +1,6 @@
 #!/bin/bash -xv
 # SPDX-FileCopyrightText: 2024 Takeru Yoshida
+# SPDX-License-Identifier: BSD-3-Clause
 #数字を入力してくダサい
 decimal_number = int(input("数字の入力をしてください: "))
 
