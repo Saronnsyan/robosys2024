@@ -1,3 +1,5 @@
+#!/bin/bash -xv
+# SPDX-FileCopyrightText: 2024 Takeru Yoshida
 #数字を入力してくダサい
 decimal_number = int(input("数字の入力をしてください: "))
 
