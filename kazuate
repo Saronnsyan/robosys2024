@@ -23,7 +23,7 @@ def number_guessing_game():
                print("もうちょい小さい！")
 
            else:
-               print("正解です！ {attempts}回目で当たりました！")
+               print(f"正解です！ {attempts}回目で当たりました！")
                break
         except ValueError:
             print("エラー：数字を入力してください")
