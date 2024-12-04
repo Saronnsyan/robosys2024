@@ -15,21 +15,23 @@ function check_output {
 
 SCRIPT="./kazuate"
 
-#テストケース１：正常な入力で数が当たる
+# テストケース1: 正常な入力で数が当たる
+# 入力をシミュレーションして、正しい出力が得られるか確認
 output=$(echo -e "25\n" | python3 $SCRIPT)
 check_output "正解です！" "$output"
 
-#テストケース２：入力した値が外れる
-output=$(echo -e "10\n30\n20\n" | python3 $SCRIPT)
-check_out "もうちょい大きい！" "$output"
-check_out "もうちょい小さい！" "$output"
-
-#テストケース３：違う文字を入力
-output=$(echo -e "a\n25\n" | python3 $SCRIPT)
+# テストケース2: 無効な入力を与えたときにエラーメッセージが出るか確認
+output=$(echo -e "abc\n25\n" | python3 $SCRIPT)
 check_output "エラー：数字を入力してください" "$output"
 
-#テストケース４：最初の文字で正解
+# テストケース3: 「もうちょい大きい！」または「もうちょい小さい！」の確認
+output=$(echo -e "10\n30\n20\n" | python3 $SCRIPT)
+check_output "もうちょい大きい！" "$output"
+check_output "もうちょい小さい！" "$output"
+
+# テストケース4: 最初の入力で正解が出る場合の確認
 output=$(echo -e "25\n" | python3 $SCRIPT)
 check_output "正解です！" "$output"
+
 
 echo "すべてのテストが成功しました。"
