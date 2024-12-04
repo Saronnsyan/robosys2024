@@ -13,7 +13,7 @@ function check_output {
 	fi
 }
 
-SCRIPT="./number_guessing_game.py"
+SCRIPT="./kazuate"
 
 #テストケース１：正解に到達
 output=$(echo -e "25\n30\n20" | python3 $SCRIPT)
