@@ -15,20 +15,21 @@ function check_output {
 
 SCRIPT="./kazuate"
 
-#テストケース１：正解に到達
-output=$(echo -e "25\n30\n20" | python3 $SCRIPT)
+#テストケース１：正常な入力で数が当たる
+output=$(echo -e "25\n" | python3 $SCRIPT)
 check_output "正解です！" "$output"
 
-#テストケース２：数値以外を入力した場合のエラーメッセージ
-output=$(echo -e "hello\n50" | python3 $SCRIPT)
-check_out "エラー：数字を入力してください" "$output"
+#テストケース２：入力した値が外れる
+output=$(echo -e "10\n30\n20\n" | python3 $SCRIPT)
+check_out "もうちょい大きい！" "$output"
+check_out "もうちょい小さい！" "$output"
 
-#テストケース３：数字が小さい場合のヒント
-output=$(echo -e "10\n15\n" | python3 $SCRIPT)
-check_output "もうちょい大きい！" "$output"
+#テストケース３：違う文字を入力
+output=$(echo -e "a\n25\n" | python3 $SCRIPT)
+check_output "エラー：数字を入力してください" "$output"
 
-#テストケース４：数字が大きい場合のヒント
-output=$(echo -e "50\n40\n" | python3 $SCRIPT)
-check_output "もうちょい小さい！" "$output"
+#テストケース４：最初の文字で正解
+output=$(echo -e "25\n" | python3 $SCRIPT)
+check_output "正解です！" "$output"
 
 echo "すべてのテストが成功しました。"
