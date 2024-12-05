@@ -13,7 +13,7 @@
 
 ーリポジトリをクローン
 
-git clone git@github.com:Saronnsyan/robosys2024.git
+git clone git@github.com:Saronnsyan/robosys2024
 
 cd robosys2024
 
