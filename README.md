@@ -1,6 +1,6 @@
 # 数当てゲーム
-[![test](https://github.com/Saronnsyan/robosys2024/blob/main/.github/workflows/kazuate_test.yml)](https://github.com/Saronnsyan/robosys2024/blob/main/.github/workflows/kazuate_test.yml)
 
+[![test](https://github.com/Saronnsyan/robosys2024/blob/main/.github/workflows/kazuate_test.yml)]
 
 
 ## 概要
