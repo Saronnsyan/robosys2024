@@ -1,5 +1,5 @@
-# robosys2024
-ロボットシステム学授業用
+# 数当てゲーム
+
 ![test](https://github.com/Saronnsyan/robosys2024.git)
 
 
