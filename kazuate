@@ -7,26 +7,30 @@ import random
 
 
 def number_guessing_game():
-    print("数宛ゲームを始めます！1～50の間の数を入力してください")
-    random_number = random.randint(1,50) #1~50の中の数字を生成する
-    attempts = 0
+    print("ランダム数当てゲーム！１か２を入力してください。連続で当てた回数を計測します！")
+    consecutive_correct = 0
 
     while True:
+        #ランダムに1か2を生成
+        random_number = random.randint(1,2)
+
+
         try:
-           user_guess = int(input("あなたの予想："))
-           attempts += 1
+           user_guess = int(input("あなたの予想(１か２)："))
+           if user_guess not in [1, 2]:
+               print("１か２を入力してください！")
+               continue
 
-           if user_guess < random_number:
-               print("もうちょい大きい！")
 
-           elif user_guess > random_number:
-               print("もうちょい小さい！")
-
+           if user_guess == random_number:
+               consecutive_correct += 1
+               print(f"正解！現在の連続回数：{consecutive_correct}")
            else:
-               print(f"正解です！ {attempts}回目で当たりました！")
+               print(f"不正解！ランダム数は {random_number}でした。")
+               print(f"最終的な連続正解数は{consecutive_correct}でした。")
                break
         except ValueError:
-            print("エラー：数字を入力してください")
+            print("エラー：１または２の数字を入力してください")
 
 
 number_guessing_game()
