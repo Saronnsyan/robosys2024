@@ -1,5 +1,6 @@
 #!/bin/bash
-
+#SPDX-FileCopyrigtText: 2024 Takeru Yoshida
+#SPDX-License-Identifier: BSD-3-Clause
 function check_output {
 	expected="$1"
 	actual="$2"
