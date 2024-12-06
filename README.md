@@ -12,20 +12,28 @@
 
 ## インストール手順
 
-ーリポジトリをクローン
+・リポジトリをクローン
 
 git clone git@github.com:Saronnsyan/robosys2024
 
+```bash
 cd robosys2024
+```
 
 ## pythonの環境がインストールされているか確認
+```bash
 python3 --version
+```
 
 ## 実行権限付与
+```bash
 chmod +x kazuate
+```
 
 ## 実行
+```bash
 ./kazuate 
+```
 
 ## 使用例
 ランダム数当てゲーム！１か２を入力してください。連続で当てた回数を計測します！
@@ -51,8 +59,9 @@ chmod +x kazuate
 
 ## テスト
 テストを実行するには以下のコマンドを使用してください
-
+```bash
 bash kazuate_test.bash
+```
 
 ## ライセンス
 このソフトウェアパッケージは、3条項BSDライセンスの下、再頒布および使用が許可されます。
