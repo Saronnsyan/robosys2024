@@ -13,9 +13,9 @@
 ## インストール手順
 
 ・リポジトリをクローン
-
+```bash
 git clone git@github.com:Saronnsyan/robosys2024
-
+```
 ```bash
 cd robosys2024
 ```
